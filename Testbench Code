@@ -1,0 +1,24 @@
+module triangular_tb;
+reg clk,reset;
+wire [3:0] out;
+
+triangular uut(
+    .clk(clk),
+    .reset(reset),
+    .out(out)
+);
+
+always #5 clk = ~clk;
+initial begin
+    $dumpfile("triangular.vcd");
+    $dumpvars(0,triangular_tb);
+
+    clk = 0;
+    reset =1;
+    #5;
+
+    reset = 0;
+    #400;
+    $finish;
+end
+endmodule
