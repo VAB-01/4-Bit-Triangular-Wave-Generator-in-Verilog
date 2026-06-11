@@ -1,0 +1,1 @@
+# 4-Bit-Triangular-Wave-Generator-in-Verilog
